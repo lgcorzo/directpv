@@ -22,7 +22,7 @@ import (
 	fmt "fmt"
 	http "net/http"
 
-	directpvv1beta1 "github.com/minio/directpv/pkg/clientset/typed/directpv.min.io/v1beta1"
+	directpvv1beta1 "github.com/lgcorzo/directpv/pkg/clientset/typed/directpv.min.io/v1beta1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"

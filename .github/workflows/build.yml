@@ -25,8 +25,8 @@ jobs:
       - name: Set environment
         run: |
           echo "GOPATH=$(go env GOPATH)" >> $GITHUB_ENV
-          mkdir -p "$(go env GOPATH)/src/github.com/minio/"
-          ln -s "$PWD" "$(go env GOPATH)/src/github.com/minio/directpv"
+          mkdir -p "$(go env GOPATH)/src/github.com/lgcorzo/"
+          ln -s "$PWD" "$(go env GOPATH)/src/github.com/lgcorzo/directpv"
       - name: Build and test
         env:
           CGO_ENABLED: 0

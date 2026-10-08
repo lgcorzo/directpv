@@ -17,8 +17,8 @@
 package client
 
 import (
-	"github.com/minio/directpv/pkg/k8s"
-	legacyclientsetfake "github.com/minio/directpv/pkg/legacy/clientset/fake"
+	"github.com/lgcorzo/directpv/pkg/k8s"
+	legacyclientsetfake "github.com/lgcorzo/directpv/pkg/legacy/clientset/fake"
 )
 
 // FakeInit initializes fake clients.

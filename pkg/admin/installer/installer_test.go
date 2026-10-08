@@ -20,9 +20,9 @@ import (
 	"io"
 	"testing"
 
-	"github.com/minio/directpv/pkg/client"
-	"github.com/minio/directpv/pkg/k8s"
-	legacyclient "github.com/minio/directpv/pkg/legacy/client"
+	"github.com/lgcorzo/directpv/pkg/client"
+	"github.com/lgcorzo/directpv/pkg/k8s"
+	legacyclient "github.com/lgcorzo/directpv/pkg/legacy/client"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	versionpkg "k8s.io/apimachinery/pkg/util/version"
 	"k8s.io/apimachinery/pkg/version"

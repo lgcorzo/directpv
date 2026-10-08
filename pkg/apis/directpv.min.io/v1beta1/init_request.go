@@ -18,8 +18,8 @@ package v1beta1
 
 import (
 	"github.com/google/uuid"
-	"github.com/minio/directpv/pkg/apis/directpv.min.io/types"
-	"github.com/minio/directpv/pkg/consts"
+	"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/types"
+	"github.com/lgcorzo/directpv/pkg/consts"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 

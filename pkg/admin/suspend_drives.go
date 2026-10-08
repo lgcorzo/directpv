@@ -21,7 +21,7 @@ import (
 	"errors"
 	"fmt"
 
-	directpvtypes "github.com/minio/directpv/pkg/apis/directpv.min.io/types"
+	directpvtypes "github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/types"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/util/retry"
 )

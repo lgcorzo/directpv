@@ -20,9 +20,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/minio/directpv/pkg/apis/directpv.min.io/types"
-	"github.com/minio/directpv/pkg/consts"
-	"github.com/minio/directpv/pkg/utils"
+	"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/types"
+	"github.com/lgcorzo/directpv/pkg/consts"
+	"github.com/lgcorzo/directpv/pkg/utils"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 

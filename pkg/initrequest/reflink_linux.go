@@ -25,8 +25,8 @@ import (
 
 	losetup "github.com/freddierice/go-losetup/v2"
 	"github.com/google/uuid"
-	"github.com/minio/directpv/pkg/sys"
-	"github.com/minio/directpv/pkg/xfs"
+	"github.com/lgcorzo/directpv/pkg/sys"
+	"github.com/lgcorzo/directpv/pkg/xfs"
 	"k8s.io/klog/v2"
 )
 

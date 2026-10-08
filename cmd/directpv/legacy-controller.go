@@ -19,10 +19,10 @@ package main
 import (
 	"context"
 
-	"github.com/minio/directpv/pkg/consts"
-	"github.com/minio/directpv/pkg/csi/controller"
-	pkgidentity "github.com/minio/directpv/pkg/csi/identity"
-	legacyclient "github.com/minio/directpv/pkg/legacy/client"
+	"github.com/lgcorzo/directpv/pkg/consts"
+	"github.com/lgcorzo/directpv/pkg/csi/controller"
+	pkgidentity "github.com/lgcorzo/directpv/pkg/csi/identity"
+	legacyclient "github.com/lgcorzo/directpv/pkg/legacy/client"
 	"github.com/spf13/cobra"
 	"k8s.io/klog/v2"
 )

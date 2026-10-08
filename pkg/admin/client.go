@@ -17,7 +17,7 @@
 package admin
 
 import (
-	"github.com/minio/directpv/pkg/client"
+	"github.com/lgcorzo/directpv/pkg/client"
 	"k8s.io/client-go/rest"
 )
 

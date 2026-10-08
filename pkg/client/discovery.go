@@ -20,9 +20,9 @@ import (
 	"context"
 	"fmt"
 
-	directpvtypes "github.com/minio/directpv/pkg/apis/directpv.min.io/types"
-	"github.com/minio/directpv/pkg/types"
-	"github.com/minio/directpv/pkg/utils"
+	directpvtypes "github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/types"
+	"github.com/lgcorzo/directpv/pkg/types"
+	"github.com/lgcorzo/directpv/pkg/utils"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 

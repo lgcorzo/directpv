@@ -150,7 +150,7 @@ resources:
   - ../resources/base
 
 images:
-  - name: quay.io/minio/directpv
+  - name: quay.io/lgcorzo/directpv
     newTag: "${VERSION}"
 EOF
 
@@ -207,7 +207,7 @@ resources:
   - ../resources/base
 
 images:
-  - name: quay.io/minio/directpv
+  - name: quay.io/lgcorzo/directpv
     newTag: ${VERSION}
 EOF
     # delete hangs sometimes even after the resources are deleted

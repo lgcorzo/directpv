@@ -20,7 +20,7 @@ import (
 	"context"
 
 	"github.com/container-storage-interface/spec/lib/go/csi"
-	"github.com/minio/directpv/pkg/consts"
+	"github.com/lgcorzo/directpv/pkg/consts"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

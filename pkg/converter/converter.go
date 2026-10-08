@@ -22,8 +22,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	directpvtypes "github.com/minio/directpv/pkg/apis/directpv.min.io/types"
-	"github.com/minio/directpv/pkg/consts"
+	directpvtypes "github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/types"
+	"github.com/lgcorzo/directpv/pkg/consts"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"

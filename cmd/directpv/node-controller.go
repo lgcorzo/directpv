@@ -21,10 +21,10 @@ import (
 	"errors"
 	"os"
 
-	"github.com/minio/directpv/pkg/consts"
-	"github.com/minio/directpv/pkg/initrequest"
-	"github.com/minio/directpv/pkg/node"
-	"github.com/minio/directpv/pkg/sys"
+	"github.com/lgcorzo/directpv/pkg/consts"
+	"github.com/lgcorzo/directpv/pkg/initrequest"
+	"github.com/lgcorzo/directpv/pkg/node"
+	"github.com/lgcorzo/directpv/pkg/sys"
 	"github.com/spf13/cobra"
 	"k8s.io/klog/v2"
 )

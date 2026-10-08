@@ -18,19 +18,19 @@ resources:
   - Deployment.yaml
 
 images:
-  - name: quay.io/minio/directpv
+  - name: quay.io/lgcorzo/directpv
     digest: sha256:352806476d3962a6fc4b8a615c95ce2391ca8b0ece00c99b402fd140555b69b5
 
-  - name: quay.io/minio/csi-node-driver-registrar
+  - name: quay.io/lgcorzo/csi-node-driver-registrar
     digest: sha256:183b3ac969d133457595fa2abfd9d81d20e83a6bc4606375662d036f56462dde
 
-  - name: quay.io/minio/livenessprobe
+  - name: quay.io/lgcorzo/livenessprobe
     digest: sha256:af8bac7b24bbfcc064e58d45c1c2ebaf75b9ac71315a604e0870100fa6aed8da
 
-  - name: quay.io/minio/csi-provisioner
+  - name: quay.io/lgcorzo/csi-provisioner
     digest: sha256:f83e880ce4290b1ef4fa15a588138eafecdb40106208a5295c0b24d03cbaddbd
 
-  - name: quay.io/minio/csi-resizer
+  - name: quay.io/lgcorzo/csi-resizer
     digest: sha256:cb338f5c5a9f781f289b6f25fedebbeeb4eec9fda2aeb2c0a1eaa8529c4c9738
 
 patches:

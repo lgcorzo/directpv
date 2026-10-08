@@ -19,7 +19,7 @@ package client
 import (
 	"context"
 
-	directv1beta5 "github.com/minio/directpv/pkg/legacy/apis/direct.csi.min.io/v1beta5"
+	directv1beta5 "github.com/lgcorzo/directpv/pkg/legacy/apis/direct.csi.min.io/v1beta5"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )

@@ -23,8 +23,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/minio/directpv/pkg/sys"
-	"github.com/minio/directpv/pkg/utils"
+	"github.com/lgcorzo/directpv/pkg/sys"
+	"github.com/lgcorzo/directpv/pkg/utils"
 )
 
 func newDevice(

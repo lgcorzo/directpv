@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/minio/directpv/pkg/admin"
-	"github.com/minio/directpv/pkg/consts"
+	"github.com/lgcorzo/directpv/pkg/admin"
+	"github.com/lgcorzo/directpv/pkg/consts"
 	"github.com/spf13/cobra"
 )
 

@@ -27,7 +27,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/minio/directpv/pkg/consts"
+	"github.com/lgcorzo/directpv/pkg/consts"
 )
 
 var loopDeviceRegexp = regexp.MustCompile("^loop[0-9]*")

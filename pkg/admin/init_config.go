@@ -23,8 +23,8 @@ import (
 	"strings"
 
 	"github.com/google/uuid"
-	directpvtypes "github.com/minio/directpv/pkg/apis/directpv.min.io/types"
-	"github.com/minio/directpv/pkg/types"
+	directpvtypes "github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/types"
+	"github.com/lgcorzo/directpv/pkg/types"
 	"gopkg.in/yaml.v3"
 )
 

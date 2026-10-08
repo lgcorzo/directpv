@@ -35,7 +35,7 @@ go install sigs.k8s.io/controller-tools/cmd/controller-gen@v0.20.1
 
 cd "$(dirname "$0")"
 
-REPOSITORY=github.com/minio/directpv
+REPOSITORY=github.com/lgcorzo/directpv
 
 # Remove old generated code
 rm -rf pkg/clientset

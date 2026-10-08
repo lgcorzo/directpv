@@ -19,9 +19,9 @@
 package fake
 
 import (
-	clientset "github.com/minio/directpv/pkg/clientset"
-	directpvv1beta1 "github.com/minio/directpv/pkg/clientset/typed/directpv.min.io/v1beta1"
-	fakedirectpvv1beta1 "github.com/minio/directpv/pkg/clientset/typed/directpv.min.io/v1beta1/fake"
+	clientset "github.com/lgcorzo/directpv/pkg/clientset"
+	directpvv1beta1 "github.com/lgcorzo/directpv/pkg/clientset/typed/directpv.min.io/v1beta1"
+	fakedirectpvv1beta1 "github.com/lgcorzo/directpv/pkg/clientset/typed/directpv.min.io/v1beta1/fake"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"

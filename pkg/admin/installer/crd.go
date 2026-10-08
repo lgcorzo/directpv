@@ -21,9 +21,9 @@ import (
 	_ "embed"
 	"fmt"
 
-	directpvtypes "github.com/minio/directpv/pkg/apis/directpv.min.io/types"
-	"github.com/minio/directpv/pkg/client"
-	"github.com/minio/directpv/pkg/consts"
+	directpvtypes "github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/types"
+	"github.com/lgcorzo/directpv/pkg/client"
+	"github.com/lgcorzo/directpv/pkg/consts"
 	"k8s.io/apiextensions-apiserver/pkg/apihelpers"
 	apiextensions "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"

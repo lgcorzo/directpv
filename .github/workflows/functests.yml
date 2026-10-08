@@ -38,8 +38,8 @@ jobs:
       - name: Set environment
         run: |
           echo "GOPATH=$(go env GOPATH)" >> $GITHUB_ENV
-          mkdir -p "$(go env GOPATH)/src/github.com/minio/"
-          ln -s "$PWD" "$(go env GOPATH)/src/github.com/minio/directpv"
+          mkdir -p "$(go env GOPATH)/src/github.com/lgcorzo/"
+          ln -s "$PWD" "$(go env GOPATH)/src/github.com/lgcorzo/directpv"
           echo "VERSION=$(git describe --tags --always --dirty)" >> $GITHUB_ENV
           # To Fix: chmod: cannot access '/etc/cni/net.d': No such file or directory
           sudo mkdir -p /etc/cni/net.d
@@ -49,8 +49,8 @@ jobs:
           CGO_ENABLED: 0
           GO111MODULE: on
         run: |
-          go build -tags "osusergo netgo static_build" -ldflags="-X main.Version=${VERSION} -extldflags=-static" github.com/minio/directpv/cmd/directpv
-          go build -tags "osusergo netgo static_build" -ldflags="-X main.Version=${VERSION} -extldflags=-static" github.com/minio/directpv/cmd/kubectl-directpv
+          go build -tags "osusergo netgo static_build" -ldflags="-X main.Version=${VERSION} -extldflags=-static" github.com/lgcorzo/directpv/cmd/directpv
+          go build -tags "osusergo netgo static_build" -ldflags="-X main.Version=${VERSION} -extldflags=-static" github.com/lgcorzo/directpv/cmd/kubectl-directpv
 
       - name: Setup Minikube
         uses: medyagh/setup-minikube@latest
@@ -67,7 +67,7 @@ jobs:
 
       - name: Build docker image
         run: |
-          docker build --quiet -t quay.io/minio/directpv:${VERSION} .
+          docker build --quiet -t quay.io/lgcorzo/directpv:${VERSION} .
           docker build --quiet -t example.org/test/sleep:v0.0.1 -f functests/Dockerfile.sleep functests
 
       - name: Enable kustomize

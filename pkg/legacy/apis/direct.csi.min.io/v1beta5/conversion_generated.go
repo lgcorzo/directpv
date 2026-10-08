@@ -24,7 +24,7 @@ package v1beta5
 import (
 	unsafe "unsafe"
 
-	v1beta4 "github.com/minio/directpv/pkg/legacy/apis/direct.csi.min.io/v1beta4"
+	v1beta4 "github.com/lgcorzo/directpv/pkg/legacy/apis/direct.csi.min.io/v1beta4"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	conversion "k8s.io/apimachinery/pkg/conversion"
 	runtime "k8s.io/apimachinery/pkg/runtime"

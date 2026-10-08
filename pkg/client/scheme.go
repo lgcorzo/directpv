@@ -17,7 +17,7 @@
 package client
 
 import (
-	"github.com/minio/directpv/pkg/types"
+	"github.com/lgcorzo/directpv/pkg/types"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"

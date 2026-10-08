@@ -27,11 +27,11 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/fatih/color"
 	"github.com/jedib0t/go-pretty/v6/table"
-	"github.com/minio/directpv/pkg/admin"
-	"github.com/minio/directpv/pkg/admin/installer"
-	"github.com/minio/directpv/pkg/consts"
-	"github.com/minio/directpv/pkg/k8s"
-	"github.com/minio/directpv/pkg/utils"
+	"github.com/lgcorzo/directpv/pkg/admin"
+	"github.com/lgcorzo/directpv/pkg/admin/installer"
+	"github.com/lgcorzo/directpv/pkg/consts"
+	"github.com/lgcorzo/directpv/pkg/k8s"
+	"github.com/lgcorzo/directpv/pkg/utils"
 	"github.com/spf13/cobra"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/util/version"
@@ -40,7 +40,7 @@ import (
 var (
 	image            = consts.AppName + ":" + Version
 	registry         = "quay.io"
-	org              = "minio"
+	org              = "lgcorzo"
 	nodeSelectorArgs = []string{}
 	tolerationArgs   = []string{}
 	seccompProfile   = ""

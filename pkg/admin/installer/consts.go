@@ -16,7 +16,7 @@
 
 package installer
 
-import "github.com/minio/directpv/pkg/consts"
+import "github.com/lgcorzo/directpv/pkg/consts"
 
 const (
 	// UnixCSIEndpoint is csi drive control socket.

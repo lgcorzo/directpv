@@ -21,11 +21,11 @@ import (
 	"testing"
 
 	"github.com/container-storage-interface/spec/lib/go/csi"
-	directpvtypes "github.com/minio/directpv/pkg/apis/directpv.min.io/types"
-	"github.com/minio/directpv/pkg/client"
-	clientsetfake "github.com/minio/directpv/pkg/clientset/fake"
-	"github.com/minio/directpv/pkg/sys"
-	"github.com/minio/directpv/pkg/types"
+	directpvtypes "github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/types"
+	"github.com/lgcorzo/directpv/pkg/client"
+	clientsetfake "github.com/lgcorzo/directpv/pkg/clientset/fake"
+	"github.com/lgcorzo/directpv/pkg/sys"
+	"github.com/lgcorzo/directpv/pkg/types"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 

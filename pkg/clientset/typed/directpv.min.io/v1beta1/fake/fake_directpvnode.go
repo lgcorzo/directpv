@@ -19,8 +19,8 @@
 package fake
 
 import (
-	v1beta1 "github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1"
-	directpvminiov1beta1 "github.com/minio/directpv/pkg/clientset/typed/directpv.min.io/v1beta1"
+	v1beta1 "github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1"
+	directpvminiov1beta1 "github.com/lgcorzo/directpv/pkg/clientset/typed/directpv.min.io/v1beta1"
 	gentype "k8s.io/client-go/gentype"
 )
 

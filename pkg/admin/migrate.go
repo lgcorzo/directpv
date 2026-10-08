@@ -21,9 +21,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/minio/directpv/pkg/admin/installer"
-	"github.com/minio/directpv/pkg/consts"
-	legacyclient "github.com/minio/directpv/pkg/legacy/client"
+	"github.com/lgcorzo/directpv/pkg/admin/installer"
+	"github.com/lgcorzo/directpv/pkg/consts"
+	legacyclient "github.com/lgcorzo/directpv/pkg/legacy/client"
 )
 
 // MigrateArgs denotest the migrate arguments

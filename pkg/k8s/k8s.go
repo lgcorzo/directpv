@@ -22,7 +22,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/minio/directpv/pkg/utils"
+	"github.com/lgcorzo/directpv/pkg/utils"
 	"github.com/spf13/viper"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

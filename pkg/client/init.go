@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	"github.com/minio/directpv/pkg/clientset"
-	"github.com/minio/directpv/pkg/k8s"
-	"github.com/minio/directpv/pkg/types"
+	"github.com/lgcorzo/directpv/pkg/clientset"
+	"github.com/lgcorzo/directpv/pkg/k8s"
+	"github.com/lgcorzo/directpv/pkg/types"
 	apiextensions "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset/typed/apiextensions/v1"
 	"k8s.io/client-go/discovery"
 	"k8s.io/client-go/kubernetes"

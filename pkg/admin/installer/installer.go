@@ -20,9 +20,9 @@ import (
 	"context"
 
 	"github.com/fatih/color"
-	"github.com/minio/directpv/pkg/client"
-	legacyclient "github.com/minio/directpv/pkg/legacy/client"
-	"github.com/minio/directpv/pkg/utils"
+	"github.com/lgcorzo/directpv/pkg/client"
+	legacyclient "github.com/lgcorzo/directpv/pkg/legacy/client"
+	"github.com/lgcorzo/directpv/pkg/utils"
 )
 
 // GetDefaultTasks returns the installer tasks to be run

@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"strings"
 
-	directcsi "github.com/minio/directpv/pkg/legacy/apis/direct.csi.min.io/v1beta5"
+	directcsi "github.com/lgcorzo/directpv/pkg/legacy/apis/direct.csi.min.io/v1beta5"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/validation"
 	"k8s.io/klog/v2"

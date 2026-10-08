@@ -38,7 +38,7 @@ spec:
             fieldRef:
               apiVersion: v1
               fieldPath: spec.nodeName
-        image: quay.io/minio/csi-node-driver-registrar@sha256:183b3ac969d133457595fa2abfd9d81d20e83a6bc4606375662d036f56462dde
+        image: quay.io/lgcorzo/csi-node-driver-registrar@sha256:183b3ac969d133457595fa2abfd9d81d20e83a6bc4606375662d036f56462dde
         name: node-driver-registrar
         resources: {}
         terminationMessagePath: /var/log/driver-registrar-termination-log
@@ -66,7 +66,7 @@ spec:
               fieldPath: spec.nodeName
         - name: CSI_ENDPOINT
           value: unix:///csi/csi.sock
-        image: quay.io/minio/directpv@sha256:352806476d3962a6fc4b8a615c95ce2391ca8b0ece00c99b402fd140555b69b5
+        image: quay.io/lgcorzo/directpv@sha256:352806476d3962a6fc4b8a615c95ce2391ca8b0ece00c99b402fd140555b69b5
         livenessProbe:
           failureThreshold: 5
           httpGet:
@@ -137,7 +137,7 @@ spec:
             fieldRef:
               apiVersion: v1
               fieldPath: spec.nodeName
-        image: quay.io/minio/directpv@sha256:352806476d3962a6fc4b8a615c95ce2391ca8b0ece00c99b402fd140555b69b5
+        image: quay.io/lgcorzo/directpv@sha256:352806476d3962a6fc4b8a615c95ce2391ca8b0ece00c99b402fd140555b69b5
         name: node-controller
         resources: {}
         securityContext:
@@ -174,7 +174,7 @@ spec:
       - args:
         - --csi-address=/csi/csi.sock
         - --health-port=9898
-        image: quay.io/minio/livenessprobe@sha256:af8bac7b24bbfcc064e58d45c1c2ebaf75b9ac71315a604e0870100fa6aed8da
+        image: quay.io/lgcorzo/livenessprobe@sha256:af8bac7b24bbfcc064e58d45c1c2ebaf75b9ac71315a604e0870100fa6aed8da
         name: liveness-probe
         resources: {}
         terminationMessagePath: /var/log/driver-liveness-termination-log

@@ -19,8 +19,8 @@ package admin
 import (
 	"context"
 
-	"github.com/minio/directpv/pkg/admin/installer"
-	legacyclient "github.com/minio/directpv/pkg/legacy/client"
+	"github.com/lgcorzo/directpv/pkg/admin/installer"
+	legacyclient "github.com/lgcorzo/directpv/pkg/legacy/client"
 )
 
 // UninstallArgs represents the args to uninstall

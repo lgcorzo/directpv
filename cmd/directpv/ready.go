@@ -22,7 +22,7 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/minio/directpv/pkg/consts"
+	"github.com/lgcorzo/directpv/pkg/consts"
 	"k8s.io/klog/v2"
 )
 

@@ -16,7 +16,7 @@
 
 package converter
 
-import "github.com/minio/directpv/pkg/consts"
+import "github.com/lgcorzo/directpv/pkg/consts"
 
 const (
 	// HostDevRoot is "/dev" directory.

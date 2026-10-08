@@ -8,7 +8,7 @@ release:
   target_commitish: "{{ .Commit }}"
 
   github:
-    owner: minio
+    owner: lgcorzo
     name: directpv
 
   extra_files:
@@ -71,7 +71,7 @@ changelog:
 
 dockers:
   - image_templates:
-      - "quay.io/minio/directpv:{{ .Tag }}-amd64"
+      - "quay.io/lgcorzo/directpv:{{ .Tag }}-amd64"
     use: buildx
     goarch: amd64
     ids:
@@ -84,7 +84,7 @@ dockers:
     build_flag_templates:
       - "--platform=linux/amd64"
   - image_templates:
-      - "quay.io/minio/directpv:{{ .Tag }}-ppc64le"
+      - "quay.io/lgcorzo/directpv:{{ .Tag }}-ppc64le"
     use: buildx
     goarch: ppc64le
     ids:
@@ -97,7 +97,7 @@ dockers:
     build_flag_templates:
       - "--platform=linux/ppc64le"
   - image_templates:
-      - "quay.io/minio/directpv:{{ .Tag }}-arm64"
+      - "quay.io/lgcorzo/directpv:{{ .Tag }}-arm64"
     use: buildx
     goarch: arm64
     ids:
@@ -110,13 +110,13 @@ dockers:
     build_flag_templates:
       - "--platform=linux/arm64"
 docker_manifests:
-  - name_template: quay.io/minio/directpv:{{ .Tag }}
+  - name_template: quay.io/lgcorzo/directpv:{{ .Tag }}
     image_templates:
-      - quay.io/minio/directpv:{{ .Tag }}-amd64
-      - quay.io/minio/directpv:{{ .Tag }}-arm64
-      - quay.io/minio/directpv:{{ .Tag }}-ppc64le
-  - name_template: quay.io/minio/directpv:latest
+      - quay.io/lgcorzo/directpv:{{ .Tag }}-amd64
+      - quay.io/lgcorzo/directpv:{{ .Tag }}-arm64
+      - quay.io/lgcorzo/directpv:{{ .Tag }}-ppc64le
+  - name_template: quay.io/lgcorzo/directpv:latest
     image_templates:
-      - quay.io/minio/directpv:{{ .Tag }}-amd64
-      - quay.io/minio/directpv:{{ .Tag }}-arm64
-      - quay.io/minio/directpv:{{ .Tag }}-ppc64le
+      - quay.io/lgcorzo/directpv:{{ .Tag }}-amd64
+      - quay.io/lgcorzo/directpv:{{ .Tag }}-arm64
+      - quay.io/lgcorzo/directpv:{{ .Tag }}-ppc64le

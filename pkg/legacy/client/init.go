@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	"github.com/minio/directpv/pkg/k8s"
+	"github.com/lgcorzo/directpv/pkg/k8s"
 	"k8s.io/klog/v2"
 )
 
