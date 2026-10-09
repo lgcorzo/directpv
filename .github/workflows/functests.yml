@@ -34,6 +34,9 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
+          # Enable CRI plugin in containerd on GH Actions runners (disabled by default in config.toml)
+          sudo rm -f /etc/containerd/config.toml || true
+          sudo systemctl restart containerd || true
 
       - name: Set environment
         run: |
@@ -55,10 +58,8 @@ jobs:
       - name: Setup Minikube
         uses: medyagh/setup-minikube@latest
         with:
-          # The 'none' driver requires containerd as a system service which is
-          # unavailable on GH Actions ubuntu runners (RUNTIME_ENABLE error).
-          # The 'docker' driver uses the pre-installed Docker daemon instead.
-          driver: docker
+          # Driver none is required so DirectPV can discover host loop/LVM/LUKS devices
+          driver: none
           kubernetes-version: ${{ matrix.kube-version }}
 
       - name: Check Minikube
@@ -72,6 +73,9 @@ jobs:
         run: |
           docker build --quiet -t quay.io/lgcorzo/directpv:${VERSION} .
           docker build --quiet -t example.org/test/sleep:v0.0.1 -f functests/Dockerfile.sleep functests
+          # Ensure images are available to both docker and containerd k8s.io namespace
+          docker save quay.io/lgcorzo/directpv:${VERSION} | sudo ctr -n k8s.io images import - || true
+          docker save example.org/test/sleep:v0.0.1 | sudo ctr -n k8s.io images import - || true
 
       - name: Enable kustomize
         if: contains(fromJson('["v1.28.15", "v1.29.14"]'), matrix.kube-version)
