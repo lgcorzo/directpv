@@ -55,7 +55,10 @@ jobs:
       - name: Setup Minikube
         uses: medyagh/setup-minikube@latest
         with:
-          driver: none
+          # The 'none' driver requires containerd as a system service which is
+          # unavailable on GH Actions ubuntu runners (RUNTIME_ENABLE error).
+          # The 'docker' driver uses the pre-installed Docker daemon instead.
+          driver: docker
           kubernetes-version: ${{ matrix.kube-version }}
 
       - name: Check Minikube
