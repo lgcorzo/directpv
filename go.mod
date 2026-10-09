@@ -14,7 +14,7 @@ require (
 	github.com/google/uuid v1.6.0
 	github.com/jedib0t/go-pretty/v6 v6.7.8
 	github.com/kubernetes-csi/csi-lib-utils v0.23.2
-	github.com/minio/sha256-simd v1.0.1
+	github.com/lgcorzo/sha256-simd v1.0.1
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/prometheus/client_golang v1.23.2
 	github.com/prometheus/client_model v0.6.2

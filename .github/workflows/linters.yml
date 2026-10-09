@@ -25,4 +25,5 @@ jobs:
       - uses: ludeeus/action-shellcheck@master
       - uses: golangci/golangci-lint-action@v6
         with:
+          version: v1.64.5
           args: --config ./.golangci.yml --timeout=60m
