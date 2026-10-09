@@ -58,8 +58,10 @@ jobs:
       - name: Setup Minikube
         uses: medyagh/setup-minikube@latest
         with:
-          # Driver none is required so DirectPV can discover host loop/LVM/LUKS devices
+          # Driver none is required so DirectPV can discover host loop/LVM/LUKS devices.
+          # container-runtime docker uses cri-dockerd with the host docker daemon.
           driver: none
+          container-runtime: docker
           kubernetes-version: ${{ matrix.kube-version }}
 
       - name: Check Minikube
