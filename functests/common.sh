@@ -125,13 +125,14 @@ function install_directpv() {
     running_count=0
     while [[ $running_count -lt $required_count ]]; do
         echo "  ...waiting for $(( required_count - running_count )) DirectPV pods to come up"
-        sleep 1m
+        kubectl get pods -n directpv -o wide || true
+        sleep 10s
         running_count=$(kubectl get pods --field-selector=status.phase=Running --no-headers --namespace=directpv | wc -l)
     done
 
     while ! "${directpv_client}" info --quiet; do
         echo "  ...waiting for DirectPV to come up"
-        sleep 1m
+        sleep 10s
     done
 
     sleep 10
