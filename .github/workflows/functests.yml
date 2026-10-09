@@ -75,9 +75,15 @@ jobs:
         run: |
           docker build --quiet -t quay.io/lgcorzo/directpv:${VERSION} .
           docker build --quiet -t example.org/test/sleep:v0.0.1 -f functests/Dockerfile.sleep functests
+          # Pre-pull and import open-source minio test image
+          docker pull ghcr.io/lgcorzo/minio:latest || true
+          docker tag ghcr.io/lgcorzo/minio:latest minio/minio:latest || true
+          docker tag ghcr.io/lgcorzo/minio:latest minio/minio || true
           # Ensure images are available to both docker and containerd k8s.io namespace
           docker save quay.io/lgcorzo/directpv:${VERSION} | sudo ctr -n k8s.io images import - || true
           docker save example.org/test/sleep:v0.0.1 | sudo ctr -n k8s.io images import - || true
+          docker save ghcr.io/lgcorzo/minio:latest | sudo ctr -n k8s.io images import - || true
+          docker save minio/minio | sudo ctr -n k8s.io images import - || true
 
       - name: Enable kustomize
         if: contains(fromJson('["v1.28.15", "v1.29.14"]'), matrix.kube-version)
