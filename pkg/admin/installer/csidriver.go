@@ -21,9 +21,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/minio/directpv/pkg/client"
-	"github.com/minio/directpv/pkg/consts"
-	legacyclient "github.com/minio/directpv/pkg/legacy/client"
+	"github.com/lgcorzo/directpv/pkg/client"
+	"github.com/lgcorzo/directpv/pkg/consts"
+	legacyclient "github.com/lgcorzo/directpv/pkg/legacy/client"
 	storagev1 "k8s.io/api/storage/v1"
 	storagev1beta1 "k8s.io/api/storage/v1beta1"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"

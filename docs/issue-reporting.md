@@ -1,7 +1,7 @@
 # Issue reporting
 
 ## Reporting bugs
-Please open Github issue at https://github.com/minio/directpv/issues
+Please open Github issue at https://github.com/lgcorzo/directpv/issues
 
 ## Reporting security issues
 

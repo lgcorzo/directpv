@@ -23,7 +23,7 @@ import (
 	"os"
 	"path"
 
-	"github.com/minio/directpv/pkg/sys"
+	"github.com/lgcorzo/directpv/pkg/sys"
 	"k8s.io/klog/v2"
 )
 

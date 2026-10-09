@@ -21,8 +21,8 @@ package v1beta1
 import (
 	context "context"
 
-	directpvminiov1beta1 "github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1"
-	scheme "github.com/minio/directpv/pkg/clientset/scheme"
+	directpvminiov1beta1 "github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1"
+	scheme "github.com/lgcorzo/directpv/pkg/clientset/scheme"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"

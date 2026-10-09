@@ -6,5 +6,5 @@ resources:
   - ../psp
 
 images:
-  - name: quay.io/minio/directpv
+  - name: quay.io/lgcorzo/directpv
     digest: sha256:d9646b0aff6a046f3c701c2f383bf4f0e8ba9f4c65a5af4b9bc384b34bcb8e2c

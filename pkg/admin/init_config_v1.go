@@ -16,7 +16,7 @@
 
 package admin
 
-import directpvtypes "github.com/minio/directpv/pkg/apis/directpv.min.io/types"
+import directpvtypes "github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/types"
 
 // InitConfigV1 defines the config to initialize the devices
 type InitConfigV1 struct {

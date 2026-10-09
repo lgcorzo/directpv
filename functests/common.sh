@@ -125,13 +125,14 @@ function install_directpv() {
     running_count=0
     while [[ $running_count -lt $required_count ]]; do
         echo "  ...waiting for $(( required_count - running_count )) DirectPV pods to come up"
-        sleep 1m
+        kubectl get pods -n directpv -o wide || true
+        sleep 10s
         running_count=$(kubectl get pods --field-selector=status.phase=Running --no-headers --namespace=directpv | wc -l)
     done
 
     while ! "${directpv_client}" info --quiet; do
         echo "  ...waiting for DirectPV to come up"
-        sleep 1m
+        sleep 10s
     done
 
     sleep 10
@@ -150,7 +151,7 @@ resources:
   - ../resources/base
 
 images:
-  - name: quay.io/minio/directpv
+  - name: quay.io/lgcorzo/directpv
     newTag: "${VERSION}"
 EOF
 
@@ -207,7 +208,7 @@ resources:
   - ../resources/base
 
 images:
-  - name: quay.io/minio/directpv
+  - name: quay.io/lgcorzo/directpv
     newTag: ${VERSION}
 EOF
     # delete hangs sometimes even after the resources are deleted
@@ -291,9 +292,17 @@ function deploy_minio() {
 
     required_count=4
     running_count=0
+    wait_time=0
     while [[ $running_count -lt $required_count ]]; do
         echo "  ...waiting for $(( required_count - running_count )) minio pods to come up"
-        sleep 1m
+        sleep 10s
+        wait_time=$(( wait_time + 10 ))
+        if [[ $wait_time -gt 300 ]]; then
+            echo "Debug: minio pods status:"
+            kubectl get pods -A || true
+            kubectl describe pods -l app=minio || true
+            wait_time=0
+        fi
         running_count=$(kubectl get pods --field-selector=status.phase=Running --no-headers 2>/dev/null | grep -c '^minio-' || true)
     done
 }

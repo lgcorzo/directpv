@@ -21,8 +21,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/minio/directpv/pkg/apis/directpv.min.io/types"
-	"github.com/minio/directpv/pkg/consts"
+	"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/types"
+	"github.com/lgcorzo/directpv/pkg/consts"
 	"github.com/spf13/cobra"
 )
 

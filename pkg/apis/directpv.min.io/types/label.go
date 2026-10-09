@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/minio/directpv/pkg/consts"
+	"github.com/lgcorzo/directpv/pkg/consts"
 	"k8s.io/apimachinery/pkg/util/validation"
 	"k8s.io/klog/v2"
 )

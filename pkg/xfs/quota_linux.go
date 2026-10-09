@@ -25,7 +25,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	sha256 "github.com/minio/sha256-simd"
+	sha256 "github.com/lgcorzo/sha256-simd"
 	"k8s.io/klog/v2"
 )
 

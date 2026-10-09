@@ -23,7 +23,7 @@ import (
 	"path"
 	"regexp"
 
-	"github.com/minio/directpv/pkg/utils"
+	"github.com/lgcorzo/directpv/pkg/utils"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/util/version"
@@ -74,6 +74,7 @@ type Args struct {
 	ProgressCh       chan<- Message
 	ForceUninstall   bool
 	PluginVersion    string
+	SidecarOrg       string
 
 	podSecurityAdmission     bool
 	csiProvisionerImage      string
@@ -156,30 +157,37 @@ func (args *Args) getContainerImage() string {
 	return path.Join(args.Registry, args.Org, args.image)
 }
 
+func (args *Args) getSidecarOrg() string {
+	if args.SidecarOrg != "" {
+		return args.SidecarOrg
+	}
+	return "minio"
+}
+
 func (args *Args) getNodeDriverRegistrarImage() string {
 	if args.Openshift {
 		return openshiftNodeDriverRegistrarImage
 	}
-	return path.Join(args.Registry, args.Org, args.nodeDriverRegistrarImage)
+	return path.Join(args.Registry, args.getSidecarOrg(), args.nodeDriverRegistrarImage)
 }
 
 func (args *Args) getLivenessProbeImage() string {
 	if args.Openshift {
 		return openshiftLivenessProbeImage
 	}
-	return path.Join(args.Registry, args.Org, args.livenessProbeImage)
+	return path.Join(args.Registry, args.getSidecarOrg(), args.livenessProbeImage)
 }
 
 func (args *Args) getCSIProvisionerImage() string {
 	if args.Openshift {
 		return openshiftCSIProvisionerImage
 	}
-	return path.Join(args.Registry, args.Org, args.csiProvisionerImage)
+	return path.Join(args.Registry, args.getSidecarOrg(), args.csiProvisionerImage)
 }
 
 func (args *Args) getCSIResizerImage() string {
 	if args.Openshift {
 		return openshiftCSIResizerImage
 	}
-	return path.Join(args.Registry, args.Org, args.csiResizerImage)
+	return path.Join(args.Registry, args.getSidecarOrg(), args.csiResizerImage)
 }

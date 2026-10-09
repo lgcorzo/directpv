@@ -276,9 +276,9 @@ EOF
 function main() {
     set -ex
 
-    podman build -t quay.io/minio/directpv:${tag} .
-    podman save --output ${directpv_image_tar} quay.io/minio/directpv:${tag}
-    /usr/local/bin/ctr images import --digests --base-name quay.io/minio/directpv ${directpv_image_tar}
+    podman build -t quay.io/lgcorzo/directpv:${tag} .
+    podman save --output ${directpv_image_tar} quay.io/lgcorzo/directpv:${tag}
+    /usr/local/bin/ctr images import --digests --base-name quay.io/lgcorzo/directpv ${directpv_image_tar}
     xz -z ${directpv_image_tar}
 
     podman build -t example.org/test/sleep:v0.0.1 -f ${sleep_dockerfile}
@@ -311,7 +311,7 @@ function main() {
     set -ex
 
     xz -d ${directpv_image_tar_xz}
-    /usr/local/bin/ctr images import --digests --base-name quay.io/minio/directpv ${directpv_image_tar}
+    /usr/local/bin/ctr images import --digests --base-name quay.io/lgcorzo/directpv ${directpv_image_tar}
 
     xz -d ${sleep_image_tar_xz}
     /usr/local/bin/ctr images import --digests --base-name example.org/test/sleep ${sleep_image_tar}

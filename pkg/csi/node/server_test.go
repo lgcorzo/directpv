@@ -21,10 +21,10 @@ import (
 	"testing"
 
 	"github.com/container-storage-interface/spec/lib/go/csi"
-	"github.com/minio/directpv/pkg/client"
-	clientsetfake "github.com/minio/directpv/pkg/clientset/fake"
-	"github.com/minio/directpv/pkg/types"
-	"github.com/minio/directpv/pkg/xfs"
+	"github.com/lgcorzo/directpv/pkg/client"
+	clientsetfake "github.com/lgcorzo/directpv/pkg/clientset/fake"
+	"github.com/lgcorzo/directpv/pkg/types"
+	"github.com/lgcorzo/directpv/pkg/xfs"
 )
 
 func init() {

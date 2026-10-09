@@ -25,7 +25,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/minio/directpv/pkg/utils"
+	"github.com/lgcorzo/directpv/pkg/utils"
 )
 
 func parseCDROMs(r io.Reader) (utils.StringSet, error) {

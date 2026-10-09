@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"testing"
 
-	clientsetfake "github.com/minio/directpv/pkg/clientset/fake"
-	"github.com/minio/directpv/pkg/types"
+	clientsetfake "github.com/lgcorzo/directpv/pkg/clientset/fake"
+	"github.com/lgcorzo/directpv/pkg/types"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 )

@@ -20,7 +20,7 @@ import (
 	"context"
 
 	"github.com/container-storage-interface/spec/lib/go/csi"
-	directpvtypes "github.com/minio/directpv/pkg/apis/directpv.min.io/types"
+	directpvtypes "github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/types"
 )
 
 // LegacyServer denotes legacy node server.

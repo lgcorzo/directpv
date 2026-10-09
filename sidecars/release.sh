@@ -36,7 +36,7 @@ release:
    name_template: "Release version {{.Version}}"
 
    github:
-    owner: minio
+    owner: lgcorzo
     name: "{{ .ProjectName }}"
 
    extra_files:
@@ -77,7 +77,7 @@ changelog:
 
 dockers:
 - image_templates:
-  - "quay.io/minio/{{ .ProjectName }}:{{ .Tag }}-amd64"
+  - "quay.io/lgcorzo/{{ .ProjectName }}:{{ .Tag }}-amd64"
   use: buildx
   goarch: amd64
   ids:
@@ -88,7 +88,7 @@ dockers:
   build_flag_templates:
   - "--platform=linux/amd64"
 - image_templates:
-  - "quay.io/minio/{{ .ProjectName }}:{{ .Tag }}-ppc64le"
+  - "quay.io/lgcorzo/{{ .ProjectName }}:{{ .Tag }}-ppc64le"
   use: buildx
   goarch: ppc64le
   ids:
@@ -99,7 +99,7 @@ dockers:
   build_flag_templates:
   - "--platform=linux/ppc64le"
 - image_templates:
-  - "quay.io/minio/{{ .ProjectName }}:{{ .Tag }}-arm64"
+  - "quay.io/lgcorzo/{{ .ProjectName }}:{{ .Tag }}-arm64"
   use: buildx
   goarch: arm64
   ids:
@@ -110,16 +110,16 @@ dockers:
   build_flag_templates:
   - "--platform=linux/arm64"
 docker_manifests:
-- name_template: quay.io/minio/{{ .ProjectName }}:{{ .Tag }}
+- name_template: quay.io/lgcorzo/{{ .ProjectName }}:{{ .Tag }}
   image_templates:
-  - quay.io/minio/{{ .ProjectName }}:{{ .Tag }}-amd64
-  - quay.io/minio/{{ .ProjectName }}:{{ .Tag }}-arm64
-  - quay.io/minio/{{ .ProjectName }}:{{ .Tag }}-ppc64le
-- name_template: quay.io/minio/{{ .ProjectName }}:latest
+  - quay.io/lgcorzo/{{ .ProjectName }}:{{ .Tag }}-amd64
+  - quay.io/lgcorzo/{{ .ProjectName }}:{{ .Tag }}-arm64
+  - quay.io/lgcorzo/{{ .ProjectName }}:{{ .Tag }}-ppc64le
+- name_template: quay.io/lgcorzo/{{ .ProjectName }}:latest
   image_templates:
-  - quay.io/minio/{{ .ProjectName }}:{{ .Tag }}-amd64
-  - quay.io/minio/{{ .ProjectName }}:{{ .Tag }}-arm64
-  - quay.io/minio/{{ .ProjectName }}:{{ .Tag }}-ppc64le
+  - quay.io/lgcorzo/{{ .ProjectName }}:{{ .Tag }}-amd64
+  - quay.io/lgcorzo/{{ .ProjectName }}:{{ .Tag }}-arm64
+  - quay.io/lgcorzo/{{ .ProjectName }}:{{ .Tag }}-ppc64le
 EOF
 }
 

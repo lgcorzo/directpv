@@ -141,7 +141,7 @@ type VolumeConditionMessage string
 
 // Enum values of VolumeConditionMessage type.
 const (
-	VolumeConditionMessageDriveLost VolumeConditionMessage = "Associated drive was removed. Refer https://github.com/minio/directpv/blob/master/docs/troubleshooting.md"
+	VolumeConditionMessageDriveLost VolumeConditionMessage = "Associated drive was removed. Refer https://github.com/lgcorzo/directpv/blob/master/docs/troubleshooting.md"
 )
 
 // DriveConditionType denotes drive condition. Allows maximum upto 316 chars.

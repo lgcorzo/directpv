@@ -28,24 +28,24 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.Device":                  schema_pkg_apis_directpvminio_v1beta1_Device(ref),
-		"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVDrive":           schema_pkg_apis_directpvminio_v1beta1_DirectPVDrive(ref),
-		"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVDriveList":       schema_pkg_apis_directpvminio_v1beta1_DirectPVDriveList(ref),
-		"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVInitRequest":     schema_pkg_apis_directpvminio_v1beta1_DirectPVInitRequest(ref),
-		"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVInitRequestList": schema_pkg_apis_directpvminio_v1beta1_DirectPVInitRequestList(ref),
-		"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVNode":            schema_pkg_apis_directpvminio_v1beta1_DirectPVNode(ref),
-		"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVNodeList":        schema_pkg_apis_directpvminio_v1beta1_DirectPVNodeList(ref),
-		"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVVolume":          schema_pkg_apis_directpvminio_v1beta1_DirectPVVolume(ref),
-		"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVVolumeList":      schema_pkg_apis_directpvminio_v1beta1_DirectPVVolumeList(ref),
-		"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DriveSpec":               schema_pkg_apis_directpvminio_v1beta1_DriveSpec(ref),
-		"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DriveStatus":             schema_pkg_apis_directpvminio_v1beta1_DriveStatus(ref),
-		"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.InitDevice":              schema_pkg_apis_directpvminio_v1beta1_InitDevice(ref),
-		"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.InitDeviceResult":        schema_pkg_apis_directpvminio_v1beta1_InitDeviceResult(ref),
-		"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.InitRequestSpec":         schema_pkg_apis_directpvminio_v1beta1_InitRequestSpec(ref),
-		"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.InitRequestStatus":       schema_pkg_apis_directpvminio_v1beta1_InitRequestStatus(ref),
-		"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.NodeSpec":                schema_pkg_apis_directpvminio_v1beta1_NodeSpec(ref),
-		"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.NodeStatus":              schema_pkg_apis_directpvminio_v1beta1_NodeStatus(ref),
-		"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.VolumeStatus":            schema_pkg_apis_directpvminio_v1beta1_VolumeStatus(ref),
+		"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.Device":                  schema_pkg_apis_directpvminio_v1beta1_Device(ref),
+		"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVDrive":           schema_pkg_apis_directpvminio_v1beta1_DirectPVDrive(ref),
+		"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVDriveList":       schema_pkg_apis_directpvminio_v1beta1_DirectPVDriveList(ref),
+		"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVInitRequest":     schema_pkg_apis_directpvminio_v1beta1_DirectPVInitRequest(ref),
+		"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVInitRequestList": schema_pkg_apis_directpvminio_v1beta1_DirectPVInitRequestList(ref),
+		"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVNode":            schema_pkg_apis_directpvminio_v1beta1_DirectPVNode(ref),
+		"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVNodeList":        schema_pkg_apis_directpvminio_v1beta1_DirectPVNodeList(ref),
+		"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVVolume":          schema_pkg_apis_directpvminio_v1beta1_DirectPVVolume(ref),
+		"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVVolumeList":      schema_pkg_apis_directpvminio_v1beta1_DirectPVVolumeList(ref),
+		"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DriveSpec":               schema_pkg_apis_directpvminio_v1beta1_DriveSpec(ref),
+		"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DriveStatus":             schema_pkg_apis_directpvminio_v1beta1_DriveStatus(ref),
+		"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.InitDevice":              schema_pkg_apis_directpvminio_v1beta1_InitDevice(ref),
+		"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.InitDeviceResult":        schema_pkg_apis_directpvminio_v1beta1_InitDeviceResult(ref),
+		"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.InitRequestSpec":         schema_pkg_apis_directpvminio_v1beta1_InitRequestSpec(ref),
+		"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.InitRequestStatus":       schema_pkg_apis_directpvminio_v1beta1_InitRequestStatus(ref),
+		"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.NodeSpec":                schema_pkg_apis_directpvminio_v1beta1_NodeSpec(ref),
+		"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.NodeStatus":              schema_pkg_apis_directpvminio_v1beta1_NodeStatus(ref),
+		"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.VolumeStatus":            schema_pkg_apis_directpvminio_v1beta1_VolumeStatus(ref),
 	}
 }
 
@@ -145,13 +145,13 @@ func schema_pkg_apis_directpvminio_v1beta1_DirectPVDrive(ref common.ReferenceCal
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DriveSpec"),
+							Ref:     ref("github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DriveSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DriveStatus"),
+							Ref:     ref("github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DriveStatus"),
 						},
 					},
 				},
@@ -159,7 +159,7 @@ func schema_pkg_apis_directpvminio_v1beta1_DirectPVDrive(ref common.ReferenceCal
 			},
 		},
 		Dependencies: []string{
-			"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DriveSpec", "github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DriveStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DriveSpec", "github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DriveStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -198,7 +198,7 @@ func schema_pkg_apis_directpvminio_v1beta1_DirectPVDriveList(ref common.Referenc
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVDrive"),
+										Ref:     ref("github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVDrive"),
 									},
 								},
 							},
@@ -209,7 +209,7 @@ func schema_pkg_apis_directpvminio_v1beta1_DirectPVDriveList(ref common.Referenc
 			},
 		},
 		Dependencies: []string{
-			"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVDrive", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVDrive", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -243,13 +243,13 @@ func schema_pkg_apis_directpvminio_v1beta1_DirectPVInitRequest(ref common.Refere
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.InitRequestSpec"),
+							Ref:     ref("github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.InitRequestSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.InitRequestStatus"),
+							Ref:     ref("github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.InitRequestStatus"),
 						},
 					},
 				},
@@ -257,7 +257,7 @@ func schema_pkg_apis_directpvminio_v1beta1_DirectPVInitRequest(ref common.Refere
 			},
 		},
 		Dependencies: []string{
-			"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.InitRequestSpec", "github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.InitRequestStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.InitRequestSpec", "github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.InitRequestStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -296,7 +296,7 @@ func schema_pkg_apis_directpvminio_v1beta1_DirectPVInitRequestList(ref common.Re
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVInitRequest"),
+										Ref:     ref("github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVInitRequest"),
 									},
 								},
 							},
@@ -307,7 +307,7 @@ func schema_pkg_apis_directpvminio_v1beta1_DirectPVInitRequestList(ref common.Re
 			},
 		},
 		Dependencies: []string{
-			"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVInitRequest", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVInitRequest", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -341,13 +341,13 @@ func schema_pkg_apis_directpvminio_v1beta1_DirectPVNode(ref common.ReferenceCall
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.NodeSpec"),
+							Ref:     ref("github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.NodeSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.NodeStatus"),
+							Ref:     ref("github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.NodeStatus"),
 						},
 					},
 				},
@@ -355,7 +355,7 @@ func schema_pkg_apis_directpvminio_v1beta1_DirectPVNode(ref common.ReferenceCall
 			},
 		},
 		Dependencies: []string{
-			"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.NodeSpec", "github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.NodeStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.NodeSpec", "github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.NodeStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -394,7 +394,7 @@ func schema_pkg_apis_directpvminio_v1beta1_DirectPVNodeList(ref common.Reference
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVNode"),
+										Ref:     ref("github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVNode"),
 									},
 								},
 							},
@@ -405,7 +405,7 @@ func schema_pkg_apis_directpvminio_v1beta1_DirectPVNodeList(ref common.Reference
 			},
 		},
 		Dependencies: []string{
-			"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVNode", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVNode", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -439,7 +439,7 @@ func schema_pkg_apis_directpvminio_v1beta1_DirectPVVolume(ref common.ReferenceCa
 					"status": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.VolumeStatus"),
+							Ref:     ref("github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.VolumeStatus"),
 						},
 					},
 				},
@@ -447,7 +447,7 @@ func schema_pkg_apis_directpvminio_v1beta1_DirectPVVolume(ref common.ReferenceCa
 			},
 		},
 		Dependencies: []string{
-			"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.VolumeStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.VolumeStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -486,7 +486,7 @@ func schema_pkg_apis_directpvminio_v1beta1_DirectPVVolumeList(ref common.Referen
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVVolume"),
+										Ref:     ref("github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVVolume"),
 									},
 								},
 							},
@@ -497,7 +497,7 @@ func schema_pkg_apis_directpvminio_v1beta1_DirectPVVolumeList(ref common.Referen
 			},
 		},
 		Dependencies: []string{
-			"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVVolume", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+			"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.DirectPVVolume", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -702,7 +702,7 @@ func schema_pkg_apis_directpvminio_v1beta1_InitRequestSpec(ref common.ReferenceC
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.InitDevice"),
+										Ref:     ref("github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.InitDevice"),
 									},
 								},
 							},
@@ -713,7 +713,7 @@ func schema_pkg_apis_directpvminio_v1beta1_InitRequestSpec(ref common.ReferenceC
 			},
 		},
 		Dependencies: []string{
-			"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.InitDevice"},
+			"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.InitDevice"},
 	}
 }
 
@@ -743,7 +743,7 @@ func schema_pkg_apis_directpvminio_v1beta1_InitRequestStatus(ref common.Referenc
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.InitDeviceResult"),
+										Ref:     ref("github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.InitDeviceResult"),
 									},
 								},
 							},
@@ -754,7 +754,7 @@ func schema_pkg_apis_directpvminio_v1beta1_InitRequestStatus(ref common.Referenc
 			},
 		},
 		Dependencies: []string{
-			"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.InitDeviceResult"},
+			"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.InitDeviceResult"},
 	}
 }
 
@@ -796,7 +796,7 @@ func schema_pkg_apis_directpvminio_v1beta1_NodeStatus(ref common.ReferenceCallba
 								Schema: &spec.Schema{
 									SchemaProps: spec.SchemaProps{
 										Default: map[string]interface{}{},
-										Ref:     ref("github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.Device"),
+										Ref:     ref("github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.Device"),
 									},
 								},
 							},
@@ -830,7 +830,7 @@ func schema_pkg_apis_directpvminio_v1beta1_NodeStatus(ref common.ReferenceCallba
 			},
 		},
 		Dependencies: []string{
-			"github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1.Device", "k8s.io/apimachinery/pkg/apis/meta/v1.Condition"},
+			"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1.Device", "k8s.io/apimachinery/pkg/apis/meta/v1.Condition"},
 	}
 }
 

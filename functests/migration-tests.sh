@@ -67,6 +67,7 @@ function migrate_test() {
     remove_lvm
 }
 
+curl --silent --location --insecure --fail --output "${LEGACY_FILE}" "https://github.com/lgcorzo/directpv/releases/download/${LEGACY_VERSION}/${LEGACY_FILE}" || \
 curl --silent --location --insecure --fail --output "${LEGACY_FILE}" "https://github.com/minio/directpv/releases/download/${LEGACY_VERSION}/${LEGACY_FILE}"
 chmod a+x "${LEGACY_FILE}"
 migrate_test "./${LEGACY_FILE}" 4

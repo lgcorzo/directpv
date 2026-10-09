@@ -29,8 +29,8 @@ export CGO_ENABLED=0
 
 go build -tags "osusergo netgo static_build" \
    -ldflags="-X main.Version=${BUILD_VERSION} -extldflags=-static" \
-   github.com/minio/directpv/cmd/directpv
+   github.com/lgcorzo/directpv/cmd/directpv
 
 go build -tags "osusergo netgo static_build" \
    -ldflags="-X main.Version=${BUILD_VERSION} -extldflags=-static" \
-   github.com/minio/directpv/cmd/kubectl-directpv
+   github.com/lgcorzo/directpv/cmd/kubectl-directpv

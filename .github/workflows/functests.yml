@@ -25,8 +25,8 @@ jobs:
         os: [ubuntu-22.04, ubuntu-24.04]
 
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-go@v6
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
         with:
           go-version: 1.26.x
           check-latest: true
@@ -34,12 +34,17 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
+          # Generate default containerd config with CRI enabled (disabled_plugins = [])
+          sudo mkdir -p /etc/containerd
+          containerd config default | sudo tee /etc/containerd/config.toml
+          sudo systemctl restart containerd
+          sudo crictl version || true
 
       - name: Set environment
         run: |
           echo "GOPATH=$(go env GOPATH)" >> $GITHUB_ENV
-          mkdir -p "$(go env GOPATH)/src/github.com/minio/"
-          ln -s "$PWD" "$(go env GOPATH)/src/github.com/minio/directpv"
+          mkdir -p "$(go env GOPATH)/src/github.com/lgcorzo/"
+          ln -s "$PWD" "$(go env GOPATH)/src/github.com/lgcorzo/directpv"
           echo "VERSION=$(git describe --tags --always --dirty)" >> $GITHUB_ENV
           # To Fix: chmod: cannot access '/etc/cni/net.d': No such file or directory
           sudo mkdir -p /etc/cni/net.d
@@ -49,12 +54,13 @@ jobs:
           CGO_ENABLED: 0
           GO111MODULE: on
         run: |
-          go build -tags "osusergo netgo static_build" -ldflags="-X main.Version=${VERSION} -extldflags=-static" github.com/minio/directpv/cmd/directpv
-          go build -tags "osusergo netgo static_build" -ldflags="-X main.Version=${VERSION} -extldflags=-static" github.com/minio/directpv/cmd/kubectl-directpv
+          go build -tags "osusergo netgo static_build" -ldflags="-X main.Version=${VERSION} -extldflags=-static" github.com/lgcorzo/directpv/cmd/directpv
+          go build -tags "osusergo netgo static_build" -ldflags="-X main.Version=${VERSION} -extldflags=-static" github.com/lgcorzo/directpv/cmd/kubectl-directpv
 
       - name: Setup Minikube
         uses: medyagh/setup-minikube@latest
         with:
+          # Driver none is required so DirectPV can discover host loop/LVM/LUKS devices
           driver: none
           kubernetes-version: ${{ matrix.kube-version }}
 
@@ -67,8 +73,17 @@ jobs:
 
       - name: Build docker image
         run: |
-          docker build --quiet -t quay.io/minio/directpv:${VERSION} .
+          docker build --quiet -t quay.io/lgcorzo/directpv:${VERSION} .
           docker build --quiet -t example.org/test/sleep:v0.0.1 -f functests/Dockerfile.sleep functests
+          # Pre-pull and import open-source minio test image
+          docker pull ghcr.io/lgcorzo/minio:latest || true
+          docker tag ghcr.io/lgcorzo/minio:latest minio/minio:latest || true
+          docker tag ghcr.io/lgcorzo/minio:latest minio/minio || true
+          # Ensure images are available to both docker and containerd k8s.io namespace
+          docker save quay.io/lgcorzo/directpv:${VERSION} | sudo ctr -n k8s.io images import - || true
+          docker save example.org/test/sleep:v0.0.1 | sudo ctr -n k8s.io images import - || true
+          docker save ghcr.io/lgcorzo/minio:latest | sudo ctr -n k8s.io images import - || true
+          docker save minio/minio | sudo ctr -n k8s.io images import - || true
 
       - name: Enable kustomize
         if: contains(fromJson('["v1.28.15", "v1.29.14"]'), matrix.kube-version)

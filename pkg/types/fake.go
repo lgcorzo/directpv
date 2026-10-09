@@ -16,7 +16,7 @@
 
 package types
 
-import "github.com/minio/directpv/pkg/clientset/fake"
+import "github.com/lgcorzo/directpv/pkg/clientset/fake"
 
 // ExtFakeClientset denotes extended fake clientset.
 type ExtFakeClientset struct {

@@ -19,10 +19,10 @@ package client
 import (
 	"context"
 
-	"github.com/minio/directpv/pkg/consts"
-	"github.com/minio/directpv/pkg/converter"
-	"github.com/minio/directpv/pkg/k8s"
-	"github.com/minio/directpv/pkg/types"
+	"github.com/lgcorzo/directpv/pkg/consts"
+	"github.com/lgcorzo/directpv/pkg/converter"
+	"github.com/lgcorzo/directpv/pkg/k8s"
+	"github.com/lgcorzo/directpv/pkg/types"
 	"k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"

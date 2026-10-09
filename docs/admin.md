@@ -13,7 +13,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/minio/directpv/pkg/admin"
+	"github.com/lgcorzo/directpv/pkg/admin"
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
 )

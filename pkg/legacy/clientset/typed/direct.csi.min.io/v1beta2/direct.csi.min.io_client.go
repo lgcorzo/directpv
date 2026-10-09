@@ -21,8 +21,8 @@ package v1beta2
 import (
 	"net/http"
 
-	v1beta2 "github.com/minio/directpv/pkg/legacy/apis/direct.csi.min.io/v1beta2"
-	"github.com/minio/directpv/pkg/legacy/clientset/scheme"
+	v1beta2 "github.com/lgcorzo/directpv/pkg/legacy/apis/direct.csi.min.io/v1beta2"
+	"github.com/lgcorzo/directpv/pkg/legacy/clientset/scheme"
 	rest "k8s.io/client-go/rest"
 )
 

@@ -28,7 +28,7 @@ import (
 	"syscall"
 
 	"github.com/cespare/xxhash/v2"
-	"github.com/minio/directpv/pkg/utils"
+	"github.com/lgcorzo/directpv/pkg/utils"
 	"k8s.io/klog/v2"
 )
 

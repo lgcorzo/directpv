@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/minio/directpv/pkg/admin"
-	"github.com/minio/directpv/pkg/apis/directpv.min.io/types"
+	"github.com/lgcorzo/directpv/pkg/admin"
+	"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/types"
 	"github.com/spf13/cobra"
 )
 

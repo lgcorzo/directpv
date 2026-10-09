@@ -69,7 +69,7 @@ function main() {
     push_image "quay.io/minio/livenessprobe:v2.18.0-0"
     push_image "quay.io/minio/csi-resizer:v2.1.0-0"
     release=$(curl -sfL "https://api.github.com/repos/minio/directpv/releases/latest" | awk '/tag_name/ { print substr($2, 3, length($2)-4) }')
-    push_image "quay.io/minio/directpv:v${release}"
+    push_image "quay.io/lgcorzo/directpv:v${release}"
 }
 
 init "$@"

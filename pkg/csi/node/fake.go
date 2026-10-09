@@ -20,8 +20,8 @@ import (
 	"context"
 	"errors"
 
-	"github.com/minio/directpv/pkg/sys"
-	"github.com/minio/directpv/pkg/xfs"
+	"github.com/lgcorzo/directpv/pkg/sys"
+	"github.com/lgcorzo/directpv/pkg/xfs"
 )
 
 const testNodeName = "test-node"

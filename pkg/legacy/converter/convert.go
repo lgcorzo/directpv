@@ -22,7 +22,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	directcsi "github.com/minio/directpv/pkg/legacy/apis/direct.csi.min.io/v1beta5"
+	directcsi "github.com/lgcorzo/directpv/pkg/legacy/apis/direct.csi.min.io/v1beta5"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"

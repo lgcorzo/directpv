@@ -19,7 +19,7 @@ package device
 import (
 	"testing"
 
-	"github.com/minio/directpv/pkg/apis/directpv.min.io/types"
+	"github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/types"
 )
 
 func TestID(t *testing.T) {

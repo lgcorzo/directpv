@@ -22,7 +22,7 @@ import (
 	"net"
 	"net/http"
 
-	directpvtypes "github.com/minio/directpv/pkg/apis/directpv.min.io/types"
+	directpvtypes "github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/types"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"k8s.io/klog/v2"

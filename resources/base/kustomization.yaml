@@ -18,7 +18,7 @@ resources:
   - Deployment.yaml
 
 images:
-  - name: quay.io/minio/directpv
+  - name: quay.io/lgcorzo/directpv
     digest: sha256:352806476d3962a6fc4b8a615c95ce2391ca8b0ece00c99b402fd140555b69b5
 
   - name: quay.io/minio/csi-node-driver-registrar

@@ -19,7 +19,7 @@ package xfs
 import (
 	"context"
 
-	"github.com/minio/directpv/pkg/consts"
+	"github.com/lgcorzo/directpv/pkg/consts"
 )
 
 // FSLabel is filesystem label.

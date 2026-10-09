@@ -21,7 +21,7 @@ package fake
 import (
 	"context"
 
-	v1beta3 "github.com/minio/directpv/pkg/legacy/apis/direct.csi.min.io/v1beta3"
+	v1beta3 "github.com/lgcorzo/directpv/pkg/legacy/apis/direct.csi.min.io/v1beta3"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

@@ -17,7 +17,7 @@
 package client
 
 import (
-	"github.com/minio/directpv/pkg/types"
+	"github.com/lgcorzo/directpv/pkg/types"
 	"k8s.io/client-go/rest"
 )
 

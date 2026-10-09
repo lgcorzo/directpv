@@ -33,7 +33,8 @@ spec:
     spec:
       containers:
       - name: minio
-        image: minio/minio
+        image: ghcr.io/lgcorzo/minio:latest
+        imagePullPolicy: IfNotPresent
         env:
         - name: MINIO_ACCESS_KEY
           value: minio

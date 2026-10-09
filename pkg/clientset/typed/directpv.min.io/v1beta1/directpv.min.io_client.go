@@ -21,8 +21,8 @@ package v1beta1
 import (
 	http "net/http"
 
-	directpvminiov1beta1 "github.com/minio/directpv/pkg/apis/directpv.min.io/v1beta1"
-	scheme "github.com/minio/directpv/pkg/clientset/scheme"
+	directpvminiov1beta1 "github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/v1beta1"
+	scheme "github.com/lgcorzo/directpv/pkg/clientset/scheme"
 	rest "k8s.io/client-go/rest"
 )
 

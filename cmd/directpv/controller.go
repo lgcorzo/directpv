@@ -20,9 +20,9 @@ import (
 	"context"
 
 	"github.com/container-storage-interface/spec/lib/go/csi"
-	"github.com/minio/directpv/pkg/consts"
-	"github.com/minio/directpv/pkg/csi/controller"
-	pkgidentity "github.com/minio/directpv/pkg/csi/identity"
+	"github.com/lgcorzo/directpv/pkg/consts"
+	"github.com/lgcorzo/directpv/pkg/csi/controller"
+	pkgidentity "github.com/lgcorzo/directpv/pkg/csi/identity"
 	"github.com/spf13/cobra"
 	"k8s.io/klog/v2"
 )

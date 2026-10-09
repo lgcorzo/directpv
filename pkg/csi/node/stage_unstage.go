@@ -20,9 +20,9 @@ import (
 	"context"
 
 	"github.com/container-storage-interface/spec/lib/go/csi"
-	"github.com/minio/directpv/pkg/client"
-	"github.com/minio/directpv/pkg/drive"
-	"github.com/minio/directpv/pkg/types"
+	"github.com/lgcorzo/directpv/pkg/client"
+	"github.com/lgcorzo/directpv/pkg/drive"
+	"github.com/lgcorzo/directpv/pkg/types"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"

@@ -17,9 +17,9 @@
 package types
 
 import (
-	directpv "github.com/minio/directpv/pkg/apis/directpv.min.io/{VERSION}"
-	"github.com/minio/directpv/pkg/clientset"
-	typeddirectpv "github.com/minio/directpv/pkg/clientset/typed/directpv.min.io/{VERSION}"
+	directpv "github.com/lgcorzo/directpv/pkg/apis/directpv.min.io/{VERSION}"
+	"github.com/lgcorzo/directpv/pkg/clientset"
+	typeddirectpv "github.com/lgcorzo/directpv/pkg/clientset/typed/directpv.min.io/{VERSION}"
 )
 
 var Versions = []string{
