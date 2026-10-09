@@ -17,12 +17,13 @@ jobs:
   linters:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-go@v6
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
         with:
           go-version: 1.26.x
           check-latest: true
       - uses: ludeeus/action-shellcheck@master
-      - uses: golangci/golangci-lint-action@v6
-        with:
-          args: --config ./.golangci.yml --timeout=60m
+      - name: Install golangci-lint
+        run: go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@v2.12.2
+      - name: Run golangci-lint
+        run: $(go env GOPATH)/bin/golangci-lint run --config ./.golangci.yml --timeout=60m
