@@ -79,7 +79,7 @@ func (client *Client) GetKubeVersion() (major, minor uint, err error) {
 	}
 
 	var u64 uint64
-	if u64, err = strconv.ParseUint(versionInfo.Major, 10, 64); err != nil {
+	if u64, err = strconv.ParseUint(versionInfo.Major, 10, 0); err != nil {
 		return 0, 0, fmt.Errorf("unable to parse major version %v; %w", versionInfo.Major, err)
 	}
 	major = uint(u64)
@@ -93,7 +93,7 @@ func (client *Client) GetKubeVersion() (major, minor uint, err error) {
 			minorString = minorString[:i]
 		}
 	}
-	if u64, err = strconv.ParseUint(minorString, 10, 64); err != nil {
+	if u64, err = strconv.ParseUint(minorString, 10, 0); err != nil {
 		return 0, 0, fmt.Errorf("unable to parse minor version %v; %w", minor, err)
 	}
 	minor = uint(u64)
