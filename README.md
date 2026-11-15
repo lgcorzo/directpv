@@ -1,5 +1,8 @@
 # DirectPV (Sovereign Edition)
 
+Maintained fork of [minio/directpv](https://github.com/minio/directpv). It applies security patches and maintenance fixes on top of upstream. Part of the [Dark Gravity](https://github.com/lgcorzo/rust_CACD_autonomous_factory) factory. License: AGPLv3.
+
+
 [![Sovereign Maintenance Status](https://img.shields.io/badge/Sovereign_Maintenance-Active-brightgreen)](https://github.com/lgcorzo/directpv)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
