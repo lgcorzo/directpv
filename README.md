@@ -20,7 +20,7 @@ This repository is maintained as a core component of the **Sovereign MinIO Ecosy
 
 * **Full Supply-Chain Autonomy:** Zero reliance on upstream vendor policy shifts, breaking license changes, or unannounced deprecations.
 * **Dark Gravity Factory Core Integration:** Essential component powering the autonomous AI factory, providing high-throughput local storage for dataset caching, model weights, cryptographic keys, and automated agent pipeline state persistence.
-* **Compliance & Security:** Sovereign maintenance ensuring continuous compliance with EU AI Act, SOC 2 Type II, ISO 25059 standards, and zero-CVE SLAs.
+* **Auditability & Security Maintenance:** Ongoing vulnerability scanning and security patching designed to facilitate auditing and traceability.
 * **Ecosystem Interoperability:** Direct integration across all 38 repositories in `@lgcorzo` (including MinIO Server, MC, KES, Operator, DirectPV, Console, and SIMD acceleration libraries).
 
 ---
@@ -100,3 +100,10 @@ Refer to [detailed documentation](./docs/README.md).
 
 ## License
 DirectPV is released under GNU AGPLv3 license. Refer to the [LICENSE document](LICENSE) for details.
+
+---
+
+### Fork Maintenance & Agent Transparency
+
+- **Changes vs. Upstream:** Security dependency updates, CI/CD workflow fixes, and CodeQL remediation are tracked in the [commit history](../../commits) and [Pull Requests](../../pulls?q=is%3Apr).
+- **Agent Tagging (`[agent]`):** Commits and pull requests generated automatically by agents in the Dark Gravity pipeline are prefixed with `[agent]` to distinguish automated maintenance from manual work.
